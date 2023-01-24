@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react";
 
 //Main component
 const App = () => {
@@ -106,8 +105,7 @@ const App = () => {
   }
  
   const title = currentSession === "SESSION" ? "Session" : "Break";
-  const btns = document.getElementsByClassName("increment-decrement");
-  console.log(btns + " here are the buttons");
+  //const btns = document.getElementsByClassName("increment-decrement");
  
   return (
     <div className="wrapper">
