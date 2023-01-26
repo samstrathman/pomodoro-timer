@@ -94,6 +94,18 @@ const App = () => {
   
   React.useEffect(() => {
     clock() 
+    if(play){
+      for(let item of btns){
+        item.style.backgroundColor = "grey";
+        item.disabled = true;
+      }
+    } else if(!play) {
+      for(let item of btns){
+        item.style.backgroundColor = "green";
+        item.disabled = false;
+      }
+    }
+
   }, [play, timeLeft, timeout])
   
   const timeFormatter = () => {
@@ -105,8 +117,8 @@ const App = () => {
   }
  
   const title = currentSession === "SESSION" ? "Session" : "Break";
-  //const btns = document.getElementsByClassName("increment-decrement");
- 
+  const btns = document.getElementsByClassName("increment-decrement");
+
   return (
     <div className="wrapper">
       <div className="title">Pomodoro Timer</div>
